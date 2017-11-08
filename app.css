@@ -1,0 +1,8 @@
+/*app.css*/
+.count{
+	font-size: 90px;position: absolute;top: 10%;left: 80px;
+}
+.avatar{
+	width: 100px;
+	height: 100px;
+}

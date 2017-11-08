@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="githubViewer">
+	<head>
+		<title>Github Service</title>
+		<link rel="stylesheet" type="text/css" href="app.css">
+		<script type="text/javascript" src="ng1.3.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+	</head>
+	<body ng-controller="mainController" ng-init="init()">
+		<h1>{{message}}</h1>
+		<div ng-hide="user">{{error}}</div>
+		<form>
+			<input type="text" name="searchUser" ng-model="userName" />
+			<input type="submit" name="search" value='search'  ng-click="getUser()"/><!--  ng-click="getUser()" -->
+		</form>
+		<div ng-show="!boom" class="count">{{countdown}}</div>
+		<div ng-show="user && boom" ng-include="'table.html'">
+		</div>
+	</body>
+
+</html>
+
+
